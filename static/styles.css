@@ -1,7 +1,10 @@
 /* static/styles.css */
 
 body {
-    background-color: #fce4ec; /* Light pink background */
+    background-color: #ffc0cb; /* Light pink background */
+    background-image: url('path/to/stars.png'); /* Replace 'path/to/stars.png' with the actual path to your star background image */
+    background-size: cover;
+    background-position: center;
     font-family: 'Arial', sans-serif;
 }
 
@@ -16,12 +19,12 @@ body {
     align-items: center;
     color: #e83e8c; /* Astro pink color */
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increase font size for the logo */
     transition: color 0.3s ease-in-out;
 }
 
 .logo {
-    width: 30px;
+    width: 50px; /* Increase the width for the logo */
     margin-right: 10px;
 }
 
@@ -83,6 +86,7 @@ body {
 .card-text a:hover {
     text-decoration: underline;
 }
+
 
 
 
