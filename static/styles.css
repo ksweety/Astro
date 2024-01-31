@@ -2,7 +2,7 @@
 
 body {
     background-color: #ffc0cb; /* Light pink background */
-    background-image: url('path/to/stars.png'); /* Replace 'path/to/stars.png' with the actual path to your star background image */
+    background-image: url('static/to/background.png'); /* Replace 'path/to/stars.png' with the actual path to your star background image */
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif;
