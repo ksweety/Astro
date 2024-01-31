@@ -1,0 +1,88 @@
+/* static/styles.css */
+
+body {
+    background-color: #fce4ec; /* Light pink background */
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #e83e8c; /* Astro pink color */
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.navbar-toggler-icon {
+    background-color: #e83e8c; /* Astro pink color */
+}
+
+.navbar-nav .nav-link {
+    color: #e83e8c; /* Astro pink color */
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ad197f; /* Lighter pink on hover */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.card {
+    border: 1px solid #f8bbd0; /* Lighter pink border */
+    background-color: #fff; /* White background */
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #f8bbd0; /* Lighter pink border */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e83e8c; /* Astro pink color */
+    transition: color 0.3s ease-in-out;
+}
+
+.card-text {
+    color: #555;
+    transition: color 0.3s ease-in-out;
+}
+
+.card-text a {
+    color: #e83e8c; /* Astro pink color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.card-text a:hover {
+    text-decoration: underline;
+}
+
+
+
