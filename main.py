@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
 # Importing flask
 
 app = Flask(__name__)   
@@ -9,6 +9,13 @@ def index():
     return render_template('home.html.jinja')  
 
 
-@app.route('/signup')
-def signup(): 
+@app.route('/signup', methods =['GET','POST'])
+def signup():  
+    if request.method =="POST": 
+        username = request.form[username] 
+        emailaddress = request.form[emailaddress] 
+        password = request.form(password)
+        
+
+
     return render_template('signup.html')  
