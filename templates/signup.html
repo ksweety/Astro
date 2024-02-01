@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f8f8; 
+            background-color: #f8f8f8; /* Super light pink background */
             font-family: 'Arial', sans-serif;
         }
 
         .navbar {
-            background-color: #ffdcdc; 
+            background-color: #ffdcdc; /* Super light pink navbar */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
-            color: #333; 
+            color: #333; /* Dark text for contrast */
             font-weight: bold;
             font-size: 1.5rem;
             display: flex;
@@ -76,12 +76,31 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-pink">
-    <a class="navbar-brand" href="#">
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="Astro Logo" class="logo">
-        ASTRO
-    </a>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-pink">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Astro Logo" class="logo">
+            ASTRO
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html.jinja">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.html">Sign-Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
 <div class="container signup-container">
     <h2 class="text-center mb-4">Sign Up</h2>
@@ -108,3 +127,4 @@
 
 </body>
 </html>
+
