@@ -6,6 +6,62 @@
     <title>Astro Home</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url(/static/background.png);
+        }
+
+        .navbar {
+            background-color: #ffb6c1;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #ffffff;
+        }
+
+        .nav-link {
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            border-bottom: 1px solid #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            color: #ff4d94;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #666666;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,7 +82,7 @@
                 <a class="nav-link" href="#">Explore</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="signup.html">Sign-Up</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
@@ -38,20 +94,28 @@
 <div class="container mt-3">
     <div class="row">
         <div class="col-md-8">
-            <!-- Post Section -->
+           
             <div class="card mb-3">
                 <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
                 <div class="card-body">
-                    <h5 class="card-title">Post Title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">Beautiful Sunset</h5>
+                    <p class="card-text">Enjoying the view of a stunning sunset. 🌅 #NatureLover</p>
                 </div>
             </div>
 
-            <!-- Add more posts here -->
+            <div class="card mb-3">
+                <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
+                <div class="card-body">
+                    <h5 class="card-title">City Lights</h5>
+                    <p class="card-text">Exploring the city at night. 🌃 #CityLife</p>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
 
         </div>
         <div class="col-md-4">
-            <!-- Sidebar or additional content can go here -->
+            <!-- Add additional content or widgets here -->
         </div>
     </div>
 </div>
@@ -62,4 +126,3 @@
 
 </body>
 </html>
-
