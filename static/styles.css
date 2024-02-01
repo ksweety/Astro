@@ -1,17 +1,16 @@
-/* static/styles.css */
 
-/* static/styles.css */
 
 body {
-    background-color: #ffc0cb; /* Light pink background */
+    background-color: #ffc0e7; /* Light pink background */
     background-image: url('static/background.png'); /* Updated path to background image */
     background-size: cover;
     background-position: center;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; 
+    color: rgba(0, 0, 0, 0);
 }
 
 .navbar {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #ccc;
     padding: 1rem;
 }
