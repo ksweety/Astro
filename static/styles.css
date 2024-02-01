@@ -1,12 +1,12 @@
 
 
 body {
-    background-color: #ffc0e7; /* Light pink background */
+    background-color: #ffc0e7; 
     background-image: url('static/background.png'); /* Updated path to background image */
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif; 
-    color: rgba(0, 0, 0, 0);
+    
 }
 
 .navbar {
@@ -48,7 +48,7 @@ body {
 
 .card {
     border: 1px solid #f8bbd0; /* Lighter pink border */
-    background-color: #fff; /* White background */
+    background-color: #f8bbd0; /* White background */
     transition: transform 0.3s ease-in-out;
 }
 
