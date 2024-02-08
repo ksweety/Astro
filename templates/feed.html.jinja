@@ -13,12 +13,12 @@
         }
 
         .navbar {
-            background-color: #ffdcdc; /* Super light pink navbar */
+            background-color: #ffdcdc !important; /* Super light pink navbar */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
-            color: #333; /* Dark text for contrast */
+            color: #333 !important; /* Dark text for contrast */
             font-weight: bold;
             font-size: 1.5rem;
             display: flex;
@@ -45,13 +45,13 @@
         }
 
         .nav-link {
-            color: #333;
+            color: #333 !important;
             font-weight: bold;
             transition: color 0.3s ease-in-out;
         }
 
         .nav-link:hover {
-            color: #ff4d94; /* Hover color */
+            color: #ff4d94 !important; /* Hover color */
         }
 
         .feed-container {
@@ -143,53 +143,21 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Sign Up</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">feed</a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <div class="container feed-container">
-    <div class="stories-container">
-        <div class="story">
-            <img src="https://via.placeholder.com/60" alt="User 1">
-            <div class="story-text">User 1</div>
-        </div>
-        <div class="story">
-            <img src="https://via.placeholder.com/60" alt="User 2">
-            <div class="story-text">User 2</div>
-        </div>
-        <div class="story">
-            <img src="https://via.placeholder.com/60" alt="User 3">
-            <div class="story-text">User 3</div>
-        </div>
-        <!-- Add more stories as needed -->
-    </div>
+    <!-- ... (rest of the content) ... -->
+</div>
 
-    <div class="card mb-3">
-        <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
-        <div class="card-body">
-            <h5 class="card-title">Beautiful Landscape</h5>
-            <p class="card-text">Enjoying the beauty of nature. 🌿 #NatureLover</p>
-        </div>
-    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <div class="card mb-3">
-        <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
-        <div class="card-body">
-            <h5 class="card-title">City Skyline</h5>
-            <p class="card-text">Marveling at the city lights. 🏙️ #CityLife</p>
-        </div>
-    </div>
+</body>
+</html>
 
-    <div class="card mb-3">
-        <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
-        <div class="card-body">
-            <h5 class="card-title">Sunset View</h5>
-            <p class="card-text">Capturing the breathtaking sunset. 🌅 #SunsetMagic</p>
-        </div>
-    </div>
-
-    <div class="card mb-3">
-        <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Sample Post Image">
-        <div class="card-body">
-            <h5 class="card-title">Coffee Time</h5>
-            <p class="card-text">Sipping on a warm cup of
