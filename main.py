@@ -102,7 +102,8 @@ def feed():
 @flask_login.login_required
 def create_post():
     if request.method == 'POST':
-        description = request.form['description']
+        description = request.form['description'] 
+        image_url = request.form['image_url']
         user_id = flask_login.current_user.id 
         likes = 0  
         timestamp = datetime.now()  
