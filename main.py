@@ -22,14 +22,15 @@ class User:
 @login_manager.user_loader 
 def load_user(user_id):
     cursor = conn.cursor() 
-    cursor.execute("SELECT * FROM 'users' WHERE 'id' = " + user_id)
+    cursor.execute("SELECT * FROM Users WHERE id = %s", (str(user_id),))
+
     result = cursor.fetchone() 
     cursor.close()
     conn.commit()
 
     if result is None: 
         return None   
-    return User(result['id'], result['username'])
+    return User(result['ID'], result['Username'])
 
 conn = pymysql.connect(
     host='10.100.33.60', 
@@ -56,7 +57,8 @@ def signup():
 
 
         cursor = conn.cursor() 
-        cursor.execute(f"INSERT INTO `Users` (Username, Email, Password) VALUES ('{username}', '{password}', '{email}')")
+        cursor.execute(f"INSERT INTO `Users` (Username, Email, Password) VALUES ('{username}', '{email}', '{password}')")
+
         cursor.close()
         conn.commit()
         
@@ -79,12 +81,22 @@ def signin():
             flask_login.login_user(user)
            
             return redirect('/feed')
-        else:
-           return "hi"
-
+       
     return render_template('signin.html.jinja')   
 
 @app.route('/feed')
 @flask_login.login_required 
 def feed(): 
-    return flask_login.current_user
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Posts") 
+    posts = cursor.fetchall()
+    cursor.close()
+    
+    return render_template('feed.html.jinja', posts=posts) 
+
+@app.route('/post', methods = ['POST'])
+def create_post(): 
+    description = request.form['description'] 
+
+    cursor = conn.cursor 
+    cursor.execute("INSERT INTO `Posts`('description', user_id')")
