@@ -188,28 +188,29 @@
         <!-- Add more stories as needed -->
     </div>
  {% for post in posts %}
-        <div class="card mb-3">
-            <img src="{{ post.image_url }}" class="card-img-top" alt="{{ post.title }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.description }}</p>
-                <div class="card-meta">
-                    <span><i class="fas fa-heart"></i> {{ post.likes }} Likes</span>
-                    <span><i class="fas fa-comment"></i> {{ post.comments }} Comments</span>
-                </div>
+    <div class="card mb-3">
+        <img src="{{ post.Images }}" class="card-img-top" alt="{{ post.Title }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.Title }}</h5>
+            <p class="card-text">{{ post.Description }}</p>
+            <div class="card-meta">
+                <span><i class="fas fa-heart"></i> {{ post.Likes }} Likes</span>
+                <span><i class="fas fa-comment"></i> {{ post.Comments }} Comments</span>
             </div>
         </div>
-    {% endfor %} 
-    <div class="card mb-3">
-        <form method="POST" action="{{ url_for('feed') }}">
-            <div class="form-group">
-                <label for="description">Post Description:</label>
-                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-pink">Submit Post</button>
-        </form>
     </div>
-   
+{% endfor %}
+
+<div class="card mb-3">
+    <form method="POST" action="{{ url_for('create_post') }}">
+        <div class="form-group">
+            <label for="description">Post Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-pink">Submit Post</button>
+    </form>
+</div>
+
 
     <!-- Other content... -->
 </div>
